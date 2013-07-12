@@ -46,11 +46,13 @@ public class ReadRedStonePowerKey extends KeyHandler
 		if(tickEnd)
 		{
 			Minecraft MC = ModLoader.getMinecraftInstance();
-			loadOptions();
+			//loadOptions();
 			//Check = false;
 			//System.out.println("RS in");
 
-			if(kb.keyCode == bindKey)
+			System.out.println(MC.gameSettings.keyBindings);
+
+			if(kb.keyCode == MC.gameSettings.keyBindings[0].keyCode)
 			{
 				if(MC.objectMouseOver != null)
 				{
@@ -67,10 +69,11 @@ public class ReadRedStonePowerKey extends KeyHandler
 		}
 	}
 
+	/*
 	public void loadOptions()
 	{
 		Minecraft MC = ModLoader.getMinecraftInstance();
-		File optionsFile = new File(MC.getMinecraftDir(), "options.txt");
+		File optionsFile = new File(MC.gameSettings., "options.txt");
 
 		try
 		{
@@ -110,6 +113,7 @@ public class ReadRedStonePowerKey extends KeyHandler
 			System.out.println(e);
 		}
 	}
+	*/
 
 	@Override
 	public void keyUp(EnumSet<TickType> types, KeyBinding kb, boolean tickEnd)

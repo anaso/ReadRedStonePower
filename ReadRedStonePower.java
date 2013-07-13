@@ -21,7 +21,7 @@ import org.lwjgl.input.Keyboard;
 (
 	modid = "ReadRedStonePower",
 	name = "Read RedStonePower",
-	version = "1.5.2"
+	version = "1.6"
 )
 @NetworkMod
 (

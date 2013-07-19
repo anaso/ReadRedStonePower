@@ -19,8 +19,6 @@ import net.minecraft.world.World;
 
 public class ReadRedStonePowerKey extends KeyHandler
 {
-	//boolean Check = false;
-
 	public static int bindKey;
 
 	HashMap <String, Boolean> Options = new HashMap<String, Boolean>();
@@ -45,7 +43,7 @@ public class ReadRedStonePowerKey extends KeyHandler
 		{
 			Minecraft MC = ModLoader.getMinecraftInstance();
 			
-			// ‰Ÿ‚³‚ê‚½ƒ{ƒ^ƒ“‚ÌŠm”F
+			// æŠ¼ã•ã‚ŒãŸãƒœã‚¿ãƒ³ã®ç¢ºèª
 			for(int i = 0; MC.gameSettings.keyBindings.length > i; i++)
 			{
 				if(MC.gameSettings.keyBindings[i].keyDescription.equals("ReadRedStonePower"))
@@ -54,9 +52,7 @@ public class ReadRedStonePowerKey extends KeyHandler
 				}
 			}
 
-			System.out.println(MC.gameSettings.keyBindings);
-
-			if(kb.keyCode == MC.gameSettings.keyBindings[0].keyCode)
+			if(kb.keyCode == this.bindKey)
 			{
 				if(MC.objectMouseOver != null)
 				{

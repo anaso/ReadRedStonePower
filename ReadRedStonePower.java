@@ -26,7 +26,8 @@ import org.lwjgl.input.Keyboard;
 )
 @NetworkMod
 (
-	clientSideRequired = true
+		clientSideRequired = false,
+		serverSideRequired = false
 )
 
 public class ReadRedStonePower
